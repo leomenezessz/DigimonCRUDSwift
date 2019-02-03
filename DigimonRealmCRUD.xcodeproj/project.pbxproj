@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B2E605C22051AE400B89FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E605B22051AE400B89FDF /* AppDelegate.swift */; };
+		8B2E605E22051AE400B89FDF /* DigimonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */; };
+		8B2E606122051AE400B89FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E605F22051AE400B89FDF /* Main.storyboard */; };
+		8B2E606322051AE500B89FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E606222051AE500B89FDF /* Assets.xcassets */; };
+		8B2E606622051AE500B89FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E606422051AE500B89FDF /* LaunchScreen.storyboard */; };
+		8B2E606F22051D9D00B89FDF /* DigimonSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E606D22051D9D00B89FDF /* DigimonSaveViewController.swift */; };
+		8B4D609422061C7800AC4608 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D609322061C7800AC4608 /* Digimon.swift */; };
+		8B4D60992206204F00AC4608 /* DigimonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */; };
+		8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */; };
+		8B4D609C2206219A00AC4608 /* lady-devimon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D609B2206219A00AC4608 /* lady-devimon.jpg */; };
+		8B93335322077830003EB162 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B93335222077830003EB162 /* close.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B2E605822051AE400B89FDF /* DigimonRealmCRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimonRealmCRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2E605B22051AE400B89FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonListViewController.swift; sourceTree = "<group>"; };
+		8B2E606022051AE400B89FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B2E606222051AE500B89FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B2E606522051AE500B89FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B2E606722051AE500B89FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2E606D22051D9D00B89FDF /* DigimonSaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonSaveViewController.swift; sourceTree = "<group>"; };
+		8B4D609322061C7800AC4608 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
+		8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigimonCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B4D609B2206219A00AC4608 /* lady-devimon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "lady-devimon.jpg"; path = "../../../../Desktop/lady-devimon.jpg"; sourceTree = "<group>"; };
+		8B93335222077830003EB162 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = ../../../../Downloads/close.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B2E605522051AE400B89FDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B2E604F22051AE400B89FDF = {
+			isa = PBXGroup;
+			children = (
+				8B2E605A22051AE400B89FDF /* DigimonRealmCRUD */,
+				8B2E605922051AE400B89FDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B2E605922051AE400B89FDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B2E605822051AE400B89FDF /* DigimonRealmCRUD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B2E605A22051AE400B89FDF /* DigimonRealmCRUD */ = {
+			isa = PBXGroup;
+			children = (
+				8B93334F220754FE003EB162 /* DigimonList */,
+				8B93334E220754E9003EB162 /* DigimonModel */,
+				8B93334D220754BE003EB162 /* DigimonSaveScene */,
+				8B4D609B2206219A00AC4608 /* lady-devimon.jpg */,
+				8B93335222077830003EB162 /* close.png */,
+				8B2E605B22051AE400B89FDF /* AppDelegate.swift */,
+				8B2E605F22051AE400B89FDF /* Main.storyboard */,
+				8B2E606222051AE500B89FDF /* Assets.xcassets */,
+				8B2E606422051AE500B89FDF /* LaunchScreen.storyboard */,
+				8B2E606722051AE500B89FDF /* Info.plist */,
+			);
+			path = DigimonRealmCRUD;
+			sourceTree = "<group>";
+		};
+		8B93334D220754BE003EB162 /* DigimonSaveScene */ = {
+			isa = PBXGroup;
+			children = (
+				8B2E606D22051D9D00B89FDF /* DigimonSaveViewController.swift */,
+			);
+			path = DigimonSaveScene;
+			sourceTree = "<group>";
+		};
+		8B93334E220754E9003EB162 /* DigimonModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D609322061C7800AC4608 /* Digimon.swift */,
+			);
+			path = DigimonModel;
+			sourceTree = "<group>";
+		};
+		8B93334F220754FE003EB162 /* DigimonList */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */,
+				8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */,
+				8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */,
+			);
+			path = DigimonList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B2E605722051AE400B89FDF /* DigimonRealmCRUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2E606A22051AE500B89FDF /* Build configuration list for PBXNativeTarget "DigimonRealmCRUD" */;
+			buildPhases = (
+				8B2E605422051AE400B89FDF /* Sources */,
+				8B2E605522051AE400B89FDF /* Frameworks */,
+				8B2E605622051AE400B89FDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigimonRealmCRUD;
+			productName = DigimonRealmCRUD;
+			productReference = 8B2E605822051AE400B89FDF /* DigimonRealmCRUD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B2E605022051AE400B89FDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Leonardo da Silva Menezes";
+				TargetAttributes = {
+					8B2E605722051AE400B89FDF = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 8B2E605322051AE400B89FDF /* Build configuration list for PBXProject "DigimonRealmCRUD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B2E604F22051AE400B89FDF;
+			productRefGroup = 8B2E605922051AE400B89FDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B2E605722051AE400B89FDF /* DigimonRealmCRUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B2E605622051AE400B89FDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4D609C2206219A00AC4608 /* lady-devimon.jpg in Resources */,
+				8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */,
+				8B2E606622051AE500B89FDF /* LaunchScreen.storyboard in Resources */,
+				8B2E606322051AE500B89FDF /* Assets.xcassets in Resources */,
+				8B93335322077830003EB162 /* close.png in Resources */,
+				8B2E606122051AE400B89FDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B2E605422051AE400B89FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B2E605E22051AE400B89FDF /* DigimonListViewController.swift in Sources */,
+				8B2E605C22051AE400B89FDF /* AppDelegate.swift in Sources */,
+				8B2E606F22051D9D00B89FDF /* DigimonSaveViewController.swift in Sources */,
+				8B4D609422061C7800AC4608 /* Digimon.swift in Sources */,
+				8B4D60992206204F00AC4608 /* DigimonCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B2E605F22051AE400B89FDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B2E606022051AE400B89FDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B2E606422051AE500B89FDF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B2E606522051AE500B89FDF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B2E606822051AE500B89FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B2E606922051AE500B89FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B2E606B22051AE500B89FDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UVX8TM63B;
+				INFOPLIST_FILE = DigimonRealmCRUD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lmenezes.DigimonRealmCRUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B2E606C22051AE500B89FDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9UVX8TM63B;
+				INFOPLIST_FILE = DigimonRealmCRUD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lmenezes.DigimonRealmCRUD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B2E605322051AE400B89FDF /* Build configuration list for PBXProject "DigimonRealmCRUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2E606822051AE500B89FDF /* Debug */,
+				8B2E606922051AE500B89FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2E606A22051AE500B89FDF /* Build configuration list for PBXNativeTarget "DigimonRealmCRUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B2E606B22051AE500B89FDF /* Debug */,
+				8B2E606C22051AE500B89FDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B2E605022051AE400B89FDF /* Project object */;
+}
