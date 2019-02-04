@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ViewControllerInsert: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  
+class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var typePicker: UIPickerView!
@@ -19,6 +20,9 @@ class ViewControllerInsert: UIViewController, UIPickerViewDataSource, UIPickerVi
     let types : [String] = ["Vaccine", "Virus", "Data", "Free", "Variable"]
     let levels : [String] = ["Fresh", "In-Training", "Rookie", "Champion","Ultimate", "Mega"]
     
+    var pictureRepresentation : NSData = NSData()
+    var digimonToSave : Digimon? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,9 +31,17 @@ class ViewControllerInsert: UIViewController, UIPickerViewDataSource, UIPickerVi
         typePicker.delegate = self
         levelPicker.delegate = self
         
-        profileImageView.image = UIImage(named: "lady-devimon.jpg")
-        
         addButton.addTarget(self, action: #selector(insertDigimon), for: .touchDown)
+        
+        if digimonToSave != nil {
+            nameTextField.text = digimonToSave?.name
+            loadImage(nsData: (digimonToSave?.image)!)
+            typePicker.selectRow(types.index(of: (digimonToSave?.type)!)!, inComponent: 0, animated: true)
+            levelPicker.selectRow(levels.index(of: (digimonToSave?.level)!)!, inComponent: 0, animated: true)
+            return
+        }
+        
+        profileImageView.image = UIImage(imageLiteralResourceName: "lady-devimon.jpg")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -37,28 +49,45 @@ class ViewControllerInsert: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       return pickerView == levelPicker ? levels.count : types.count
+        return pickerView == levelPicker ? levels.count : types.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerView == levelPicker ? levels[row] : types[row]
     }
-
+    
     @objc func insertDigimon(sender: UIButton) {
         if (nameTextField.text?.isEmpty)! {
-          showAlert(title: "Message", message: "Please choose a digimon name!")
-          return
+            showAlert(title: "Message", message: "Please choose a digimon name!")
+            return
         }
-
-       Digimon.init(name: nameTextField.text!, type: types[typePicker.selectedRow(inComponent: 0)], level: levels[levelPicker.selectedRow(inComponent: 0)], image: "")
+        
+        let realm = try! Realm()
+        
+        let digimon = Digimon()
+        digimon.name = nameTextField.text!
+        digimon.image = pictureRepresentation
+        digimon.level = levels[levelPicker.selectedRow(inComponent: 0)]
+        digimon.type = types[typePicker.selectedRow(inComponent: 0)]
+        
+        if digimonToSave != nil {
+            digimon.id = (digimonToSave?.id)!
+            digimon.image = profileImageView.image!.jpegData(compressionQuality: 0.0)! as NSData
+        }
+        
+        try! realm.write {
+            realm.add(digimon, update: true)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func showAlert(title: String, message : String){
-       let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-       alert.addAction(UIAlertAction.init(title: "close", style: .default, handler: nil))
-       self.present(alert, animated: true, completion: nil)
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction.init(title: "close", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func dismissKeyboardOnEndOfEditing(_ sender: Any) {
         self.view.endEditing(true)
     }
@@ -73,13 +102,19 @@ class ViewControllerInsert: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         profileImageView.image = (info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
+        pictureRepresentation = profileImageView.image!.jpegData(compressionQuality: 0.0)! as NSData
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func onCloseButtonClicked(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
     }
     
+    private func loadImage(nsData : NSData)   {
+        if nsData.length == 0 {
+            profileImageView.image = UIImage(named: "lady-devimon.jpg")
+            return
+        }
+        profileImageView.image = UIImage(data: nsData as Data)
+    }
 }

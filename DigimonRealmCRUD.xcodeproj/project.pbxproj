@@ -18,9 +18,11 @@
 		8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */; };
 		8B4D609C2206219A00AC4608 /* lady-devimon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D609B2206219A00AC4608 /* lady-devimon.jpg */; };
 		8B93335322077830003EB162 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B93335222077830003EB162 /* close.png */; };
+		F0F2E609498FAA0527E74595 /* Pods_DigimonRealmCRUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AB3EF06AD076AEEBE66E2DF /* Pods-DigimonRealmCRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigimonRealmCRUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD.release.xcconfig"; sourceTree = "<group>"; };
 		8B2E605822051AE400B89FDF /* DigimonRealmCRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimonRealmCRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2E605B22051AE400B89FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonListViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigimonCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B4D609B2206219A00AC4608 /* lady-devimon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "lady-devimon.jpg"; path = "../../../../Desktop/lady-devimon.jpg"; sourceTree = "<group>"; };
 		8B93335222077830003EB162 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = ../../../../Downloads/close.png; sourceTree = "<group>"; };
+		C7AA756036D51DA64AF75CCF /* Pods-DigimonRealmCRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigimonRealmCRUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD.debug.xcconfig"; sourceTree = "<group>"; };
+		CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigimonRealmCRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F2E609498FAA0527E74595 /* Pods_DigimonRealmCRUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B6DB5C26BADDD78109D404B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		537AD46F91D1E1EE40FB3402 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7AA756036D51DA64AF75CCF /* Pods-DigimonRealmCRUD.debug.xcconfig */,
+				5AB3EF06AD076AEEBE66E2DF /* Pods-DigimonRealmCRUD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8B2E604F22051AE400B89FDF = {
 			isa = PBXGroup;
 			children = (
 				8B2E605A22051AE400B89FDF /* DigimonRealmCRUD */,
 				8B2E605922051AE400B89FDF /* Products */,
+				537AD46F91D1E1EE40FB3402 /* Pods */,
+				0B6DB5C26BADDD78109D404B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B2E606A22051AE500B89FDF /* Build configuration list for PBXNativeTarget "DigimonRealmCRUD" */;
 			buildPhases = (
+				31E6E810F7A5DB8F00013634 /* [CP] Check Pods Manifest.lock */,
 				8B2E605422051AE400B89FDF /* Sources */,
 				8B2E605522051AE400B89FDF /* Frameworks */,
 				8B2E605622051AE400B89FDF /* Resources */,
+				8F368C02D5DEDDD44B88E274 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +200,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31E6E810F7A5DB8F00013634 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigimonRealmCRUD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F368C02D5DEDDD44B88E274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B2E605422051AE400B89FDF /* Sources */ = {
@@ -328,6 +403,7 @@
 		};
 		8B2E606B22051AE500B89FDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7AA756036D51DA64AF75CCF /* Pods-DigimonRealmCRUD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +422,7 @@
 		};
 		8B2E606C22051AE500B89FDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB3EF06AD076AEEBE66E2DF /* Pods-DigimonRealmCRUD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

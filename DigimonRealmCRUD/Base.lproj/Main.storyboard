@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
-        <!--ViewControllerInsert-->
+        <!--DigimonSaveViewController-->
         <scene sceneID="idf-AZ-Aqu">
             <objects>
-                <viewController title="ViewControllerInsert" id="Xa8-QX-ITq" customClass="ViewControllerInsert" customModule="DigimonRealmCRUD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="DigimonSaveViewController" id="Xa8-QX-ITq" customClass="DigimonSaveViewController" customModule="DigimonRealmCRUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="znk-Ih-3jE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

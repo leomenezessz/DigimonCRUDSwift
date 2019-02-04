@@ -7,17 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Digimon {
-   var name : String
-    var type : String
-    var level : String
-    var image : String
+class Digimon : Object {
+    @objc dynamic var  id = UUID().uuidString
+    @objc dynamic var name : String = ""
+    @objc dynamic var type : String = ""
+    @objc dynamic var level : String = ""
+    @objc dynamic var image : NSData?
     
-    init(name : String, type : String, level : String, image : String) {
-        self.name = name
-        self.type = type
-        self.level = level
-        self.image = image
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

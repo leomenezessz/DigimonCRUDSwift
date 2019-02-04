@@ -9,7 +9,7 @@
 import UIKit
 
 class DigimonCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var profileImageview: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -20,10 +20,18 @@ class DigimonCollectionViewCell: UICollectionViewCell {
     }
     
     func createDigiCell(digimon : Digimon) -> DigimonCollectionViewCell {
+        loadImage(data: digimon.image!, profileImage: profileImageview)
         nameLabel.text = digimon.name
         levelLabel.text = digimon.level
         typeLabel.text = digimon.type
         return self
     }
-
+    
+    private func loadImage(data : NSData, profileImage : UIImageView){
+        if (data.length == 0) {
+            profileImageview.image = UIImage.init(imageLiteralResourceName: "lady-devimon.jpg")
+            return
+        }
+        profileImageview.image = UIImage(data: data as Data)
+    }
 }
