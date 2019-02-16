@@ -16,8 +16,9 @@
 		8B4D609422061C7800AC4608 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D609322061C7800AC4608 /* Digimon.swift */; };
 		8B4D60992206204F00AC4608 /* DigimonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */; };
 		8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */; };
-		8B4D609C2206219A00AC4608 /* lady-devimon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D609B2206219A00AC4608 /* lady-devimon.jpg */; };
-		8B93335322077830003EB162 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B93335222077830003EB162 /* close.png */; };
+		8B75AA892217B49800FF1169 /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA882217B49800FF1169 /* SplashScreen.png */; };
+		8B75AA8D2217CEF100FF1169 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA8C2217CEF100FF1169 /* close.png */; };
+		8B75AA8F2217D41800FF1169 /* guilmon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA8E2217D41800FF1169 /* guilmon.jpg */; };
 		F0F2E609498FAA0527E74595 /* Pods_DigimonRealmCRUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +35,9 @@
 		8B4D609322061C7800AC4608 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
 		8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigimonCollectionViewCell.xib; sourceTree = "<group>"; };
-		8B4D609B2206219A00AC4608 /* lady-devimon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "lady-devimon.jpg"; path = "../../../../Desktop/lady-devimon.jpg"; sourceTree = "<group>"; };
-		8B93335222077830003EB162 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = ../../../../Downloads/close.png; sourceTree = "<group>"; };
+		8B75AA882217B49800FF1169 /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		8B75AA8C2217CEF100FF1169 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		8B75AA8E2217D41800FF1169 /* guilmon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guilmon.jpg; sourceTree = "<group>"; };
 		C7AA756036D51DA64AF75CCF /* Pods-DigimonRealmCRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigimonRealmCRUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD.debug.xcconfig"; sourceTree = "<group>"; };
 		CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigimonRealmCRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,8 +95,9 @@
 				8B93334F220754FE003EB162 /* DigimonList */,
 				8B93334E220754E9003EB162 /* DigimonModel */,
 				8B93334D220754BE003EB162 /* DigimonSaveScene */,
-				8B4D609B2206219A00AC4608 /* lady-devimon.jpg */,
-				8B93335222077830003EB162 /* close.png */,
+				8B75AA8C2217CEF100FF1169 /* close.png */,
+				8B75AA882217B49800FF1169 /* SplashScreen.png */,
+				8B75AA8E2217D41800FF1169 /* guilmon.jpg */,
 				8B2E605B22051AE400B89FDF /* AppDelegate.swift */,
 				8B2E605F22051AE400B89FDF /* Main.storyboard */,
 				8B2E606222051AE500B89FDF /* Assets.xcassets */,
@@ -190,12 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4D609C2206219A00AC4608 /* lady-devimon.jpg in Resources */,
 				8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */,
+				8B75AA8F2217D41800FF1169 /* guilmon.jpg in Resources */,
 				8B2E606622051AE500B89FDF /* LaunchScreen.storyboard in Resources */,
+				8B75AA892217B49800FF1169 /* SplashScreen.png in Resources */,
 				8B2E606322051AE500B89FDF /* Assets.xcassets in Resources */,
-				8B93335322077830003EB162 /* close.png in Resources */,
 				8B2E606122051AE400B89FDF /* Main.storyboard in Resources */,
+				8B75AA8D2217CEF100FF1169 /* close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

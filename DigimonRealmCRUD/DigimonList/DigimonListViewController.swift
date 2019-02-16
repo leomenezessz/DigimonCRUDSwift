@@ -35,6 +35,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return  cell.createDigiCell(digimon: digimonsList![indexPath.row])
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let alert = UIAlertController.init(title: "Message", message: "What you need to do with \(digimonsList![indexPath.row].name)", preferredStyle: .alert)
         

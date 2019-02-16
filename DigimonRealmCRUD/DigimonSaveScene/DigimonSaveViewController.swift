@@ -25,7 +25,7 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+               
         typePicker.dataSource = self
         levelPicker.dataSource = self
         typePicker.delegate = self
@@ -41,7 +41,10 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
             return
         }
         
-        profileImageView.image = UIImage(imageLiteralResourceName: "lady-devimon.jpg")
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
+        self.profileImageView.clipsToBounds = true
+        
+        profileImageView.image = UIImage(imageLiteralResourceName: "guilmon.jpg")
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -110,11 +113,20 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
         self.dismiss(animated: true, completion: nil)
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
+       return pickerView == levelPicker ? changeTitleColorToWhite(title: levels[row]) : changeTitleColorToWhite(title: types[row])
+    }
+    
     private func loadImage(nsData : NSData)   {
         if nsData.length == 0 {
-            profileImageView.image = UIImage(named: "lady-devimon.jpg")
+            profileImageView.image = UIImage(named: "guilmon.jpg")
             return
         }
         profileImageView.image = UIImage(data: nsData as Data)
+    }
+    
+    private func changeTitleColorToWhite(title : String) -> NSAttributedString  {
+        return NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
 }

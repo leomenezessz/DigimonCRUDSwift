@@ -29,7 +29,7 @@ class DigimonCollectionViewCell: UICollectionViewCell {
     
     private func loadImage(data : NSData, profileImage : UIImageView){
         if (data.length == 0) {
-            profileImageview.image = UIImage.init(imageLiteralResourceName: "lady-devimon.jpg")
+            profileImageview.image = UIImage.init(imageLiteralResourceName: "guilmon.jpg")
             return
         }
         profileImageview.image = UIImage(data: data as Data)
