@@ -14,19 +14,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var digimonCollectionView: UICollectionView!
     var digimonsList : Results<Digimon>?
     
+    @IBOutlet weak var emptyStateText: UILabel!
     @IBOutlet weak var insertDigimon: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let flowLayout = digimonCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let width =  UIScreen.main.bounds.size.width / 2 - 30
+        flowLayout.estimatedItemSize = CGSize(width: width, height: 260)
+        
+         self.digimonCollectionView.register(UINib(nibName: "DigimonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DigimonCell")
         
         self.digimonCollectionView.dataSource = self;
         self.digimonCollectionView.delegate = self;
         
-        self.digimonCollectionView.register(UINib(nibName: "DigimonCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DigimonCell")
+       
         
         insertDigimon.addTarget(self, action: #selector(callInsertDigimonScene), for: .touchUpInside)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if digimonsList?.count == 0 {
+            digimonCollectionView.isHidden = true
+            emptyStateText.isHidden = false
+        }else{
+            digimonCollectionView.isHidden = false
+            emptyStateText.isHidden = true
+        }
+        
         return digimonsList!.count
     }
     

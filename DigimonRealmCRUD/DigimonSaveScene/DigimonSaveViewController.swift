@@ -16,7 +16,7 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var typePicker: UIPickerView!
     @IBOutlet weak var levelPicker: UIPickerView!
     @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
+
     let types : [String] = ["Vaccine", "Virus", "Data", "Free", "Variable"]
     let levels : [String] = ["Fresh", "In-Training", "Rookie", "Champion","Ultimate", "Mega"]
     
@@ -30,7 +30,7 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
         levelPicker.dataSource = self
         typePicker.delegate = self
         levelPicker.delegate = self
-        
+
         addButton.addTarget(self, action: #selector(insertDigimon), for: .touchDown)
         
         if digimonToSave != nil {
@@ -40,10 +40,6 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
             levelPicker.selectRow(levels.index(of: (digimonToSave?.level)!)!, inComponent: 0, animated: true)
             return
         }
-        
-        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
-        self.profileImageView.clipsToBounds = true
-        
         profileImageView.image = UIImage(imageLiteralResourceName: "guilmon.jpg")
     }
     
@@ -81,8 +77,7 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
         try! realm.write {
             realm.add(digimon, update: true)
         }
-        
-        self.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
     }
     
     private func showAlert(title: String, message : String){
@@ -109,10 +104,6 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onCloseButtonClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         
        return pickerView == levelPicker ? changeTitleColorToWhite(title: levels[row]) : changeTitleColorToWhite(title: types[row])
@@ -129,4 +120,10 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
     private func changeTitleColorToWhite(title : String) -> NSAttributedString  {
         return NSAttributedString(string: title, attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
+    
+    override func viewWillLayoutSubviews() {
+        profileImageView.layer.cornerRadius = profileImageView.frame.width / 10
+        profileImageView.layer.masksToBounds = true
+    }
 }
+

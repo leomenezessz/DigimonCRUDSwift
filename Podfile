@@ -6,5 +6,6 @@ target 'DigimonRealmCRUD' do
    use_frameworks!
   # Pods for DigimonRealmCRUD
   pod 'RealmSwift'
+  pod 'IQKeyboardManagerSwift'
 
 end
