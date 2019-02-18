@@ -8,14 +8,16 @@
 
 import UIKit
 import RealmSwift
+import Spring
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var digimonCollectionView: UICollectionView!
     var digimonsList : Results<Digimon>?
+    @IBOutlet weak var emptyStateText: SpringLabel!
+    @IBOutlet weak var insertDigimon: SpringButton!
     
-    @IBOutlet weak var emptyStateText: UILabel!
-    @IBOutlet weak var insertDigimon: UIButton!
+    @IBOutlet var mainView: SpringView!
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -28,8 +30,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.digimonCollectionView.dataSource = self;
         self.digimonCollectionView.delegate = self;
         
-       
-        
         insertDigimon.addTarget(self, action: #selector(callInsertDigimonScene), for: .touchUpInside)
     }
     
@@ -38,11 +38,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if digimonsList?.count == 0 {
             digimonCollectionView.isHidden = true
             emptyStateText.isHidden = false
+            emptyStateText.animation = "squeezeDown"
+            emptyStateText.animate()
         }else{
             digimonCollectionView.isHidden = false
             emptyStateText.isHidden = true
+            mainView.animation = "squeezeUp"
+            mainView.animate()
         }
-        
         return digimonsList!.count
     }
     

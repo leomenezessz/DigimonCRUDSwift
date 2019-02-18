@@ -30,7 +30,7 @@ class DigimonSaveViewController: UIViewController, UIPickerViewDataSource, UIPic
         levelPicker.dataSource = self
         typePicker.delegate = self
         levelPicker.delegate = self
-
+        
         addButton.addTarget(self, action: #selector(insertDigimon), for: .touchDown)
         
         if digimonToSave != nil {

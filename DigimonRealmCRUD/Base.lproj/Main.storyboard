@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigimonRealmCRUD" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -38,7 +38,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-45-5F5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-45-5F5" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="0.0" y="620" width="414" height="52"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.85490196080000003" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -48,8 +48,15 @@
                                 <state key="normal" title="ADD DIGIMON">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No digimons here for while..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9It-gg-3pr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No digimons here for while..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9It-gg-3pr" customClass="SpringLabel" customModule="Spring">
                                 <rect key="frame" x="0.0" y="214" width="414" height="193"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.85490196080000003" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,9 +84,10 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="digimonCollectionView" destination="IhW-Gn-R0F" id="bnl-0q-sSA"/>
-                        <outlet property="emptyStateText" destination="9It-gg-3pr" id="gub-RS-C2G"/>
+                        <outlet property="emptyStateText" destination="9It-gg-3pr" id="F7T-BY-im5"/>
                         <outlet property="insertDigimon" destination="5dk-45-5F5" id="b4T-gD-xFW"/>
-                        <segue destination="Xa8-QX-ITq" kind="show" identifier="insertScreen" id="1B5-VP-AM0"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="1Rg-KH-OIf"/>
+                        <segue destination="Xa8-QX-ITq" kind="show" identifier="insertScreen" animates="NO" id="1B5-VP-AM0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,7 +98,7 @@
         <scene sceneID="idf-AZ-Aqu">
             <objects>
                 <viewController title="Save or Update a Digimon" id="Xa8-QX-ITq" customClass="DigimonSaveViewController" customModule="DigimonRealmCRUD" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="znk-Ih-3jE">
+                    <view key="view" contentMode="scaleToFill" id="znk-Ih-3jE" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -100,12 +108,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0N-kV-NpT">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="324"/>
                                         <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guilmon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-il-0ej">
+                                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guilmon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pUq-il-0ej">
                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="324"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="7EY-NG-96B"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="CU5-UP-Oqc" appends="YES" id="p1j-kC-oO1"/>
                                                 </connections>
@@ -120,6 +135,13 @@
                                                 <color key="textColor" red="0.25490196079999999" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInLeft"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="dismissKeyboardOnEndOfEditing:" destination="Xa8-QX-ITq" eventType="editingDidEndOnExit" id="8a6-Bd-wVE"/>
                                                 </connections>
@@ -129,11 +151,11 @@
                                             <constraint firstAttribute="height" constant="30" id="tsD-yP-ZZN"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9al-mC-TUz">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9al-mC-TUz" customClass="S">
                                         <rect key="frame" x="0.0" y="374" width="384" height="70"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ymo-VK-f0s">
-                                                <rect key="frame" x="0.0" y="0.0" width="478" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="70"/>
                                             </pickerView>
                                         </subviews>
                                         <constraints>
@@ -148,7 +170,7 @@
                                         <rect key="frame" x="0.0" y="454" width="384" height="70"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNG-sH-7Zo">
-                                                <rect key="frame" x="0.0" y="0.0" width="478" height="70"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="70"/>
                                             </pickerView>
                                         </subviews>
                                         <constraints>
@@ -174,6 +196,13 @@
                                 <state key="normal" title="SAVE DIGIMON">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInUp"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.59215686270000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -191,6 +220,13 @@
                             <constraint firstItem="0UJ-yK-C5p" firstAttribute="bottom" secondItem="M28-Dn-BqZ" secondAttribute="bottom" id="yhG-tO-k23"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M28-Dn-BqZ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

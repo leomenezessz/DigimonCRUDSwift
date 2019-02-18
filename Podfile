@@ -7,5 +7,5 @@ target 'DigimonRealmCRUD' do
   # Pods for DigimonRealmCRUD
   pod 'RealmSwift'
   pod 'IQKeyboardManagerSwift'
-
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 end

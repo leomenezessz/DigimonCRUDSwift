@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B14FB50221A0FB300432BC5 /* app-icon-180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B14FB4E221A0FB300432BC5 /* app-icon-180.jpg */; };
+		8B14FB51221A0FB300432BC5 /* app-icon-120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B14FB4F221A0FB300432BC5 /* app-icon-120.jpg */; };
+		8B14FB53221A10AF00432BC5 /* app-store-icon-1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B14FB52221A10AF00432BC5 /* app-store-icon-1024.jpg */; };
 		8B2E605C22051AE400B89FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E605B22051AE400B89FDF /* AppDelegate.swift */; };
 		8B2E605E22051AE400B89FDF /* DigimonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */; };
 		8B2E606122051AE400B89FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E605F22051AE400B89FDF /* Main.storyboard */; };
@@ -16,16 +19,17 @@
 		8B4D609422061C7800AC4608 /* Digimon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D609322061C7800AC4608 /* Digimon.swift */; };
 		8B4D60992206204F00AC4608 /* DigimonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */; };
 		8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */; };
-		8B75AA892217B49800FF1169 /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA882217B49800FF1169 /* SplashScreen.png */; };
+		8B75AA892217B49800FF1169 /* splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA882217B49800FF1169 /* splash-screen.png */; };
 		8B75AA8D2217CEF100FF1169 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA8C2217CEF100FF1169 /* close.png */; };
 		8B75AA8F2217D41800FF1169 /* guilmon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B75AA8E2217D41800FF1169 /* guilmon.jpg */; };
-		8BB04CA7221920B7001C9B04 /* Webp.net-resizeimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB04CA6221920B7001C9B04 /* Webp.net-resizeimage.png */; };
-		8BB04CA922192126001C9B04 /* Webp.net-resizeimage (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB04CA822192126001C9B04 /* Webp.net-resizeimage (1).png */; };
 		F0F2E609498FAA0527E74595 /* Pods_DigimonRealmCRUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5AB3EF06AD076AEEBE66E2DF /* Pods-DigimonRealmCRUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigimonRealmCRUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD.release.xcconfig"; sourceTree = "<group>"; };
+		8B14FB4E221A0FB300432BC5 /* app-icon-180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app-icon-180.jpg"; sourceTree = "<group>"; };
+		8B14FB4F221A0FB300432BC5 /* app-icon-120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app-icon-120.jpg"; sourceTree = "<group>"; };
+		8B14FB52221A10AF00432BC5 /* app-store-icon-1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app-store-icon-1024.jpg"; sourceTree = "<group>"; };
 		8B2E605822051AE400B89FDF /* DigimonRealmCRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimonRealmCRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2E605B22051AE400B89FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2E605D22051AE400B89FDF /* DigimonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonListViewController.swift; sourceTree = "<group>"; };
@@ -37,11 +41,9 @@
 		8B4D609322061C7800AC4608 /* Digimon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digimon.swift; sourceTree = "<group>"; };
 		8B4D60972206204F00AC4608 /* DigimonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimonCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B4D60982206204F00AC4608 /* DigimonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigimonCollectionViewCell.xib; sourceTree = "<group>"; };
-		8B75AA882217B49800FF1169 /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		8B75AA882217B49800FF1169 /* splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-screen.png"; sourceTree = "<group>"; };
 		8B75AA8C2217CEF100FF1169 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		8B75AA8E2217D41800FF1169 /* guilmon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guilmon.jpg; sourceTree = "<group>"; };
-		8BB04CA6221920B7001C9B04 /* Webp.net-resizeimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Webp.net-resizeimage.png"; sourceTree = "<group>"; };
-		8BB04CA822192126001C9B04 /* Webp.net-resizeimage (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Webp.net-resizeimage (1).png"; sourceTree = "<group>"; };
 		C7AA756036D51DA64AF75CCF /* Pods-DigimonRealmCRUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigimonRealmCRUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DigimonRealmCRUD/Pods-DigimonRealmCRUD.debug.xcconfig"; sourceTree = "<group>"; };
 		CC57023046D1915748EB8939 /* Pods_DigimonRealmCRUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigimonRealmCRUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,9 +102,10 @@
 				8B93334E220754E9003EB162 /* DigimonModel */,
 				8B93334D220754BE003EB162 /* DigimonSaveScene */,
 				8B75AA8C2217CEF100FF1169 /* close.png */,
-				8B75AA882217B49800FF1169 /* SplashScreen.png */,
-				8BB04CA6221920B7001C9B04 /* Webp.net-resizeimage.png */,
-				8BB04CA822192126001C9B04 /* Webp.net-resizeimage (1).png */,
+				8B75AA882217B49800FF1169 /* splash-screen.png */,
+				8B14FB4E221A0FB300432BC5 /* app-icon-180.jpg */,
+				8B14FB52221A10AF00432BC5 /* app-store-icon-1024.jpg */,
+				8B14FB4F221A0FB300432BC5 /* app-icon-120.jpg */,
 				8B75AA8E2217D41800FF1169 /* guilmon.jpg */,
 				8B2E605B22051AE400B89FDF /* AppDelegate.swift */,
 				8B2E605F22051AE400B89FDF /* Main.storyboard */,
@@ -200,13 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4D609A2206204F00AC4608 /* DigimonCollectionViewCell.xib in Resources */,
-				8BB04CA922192126001C9B04 /* Webp.net-resizeimage (1).png in Resources */,
 				8B75AA8F2217D41800FF1169 /* guilmon.jpg in Resources */,
+				8B14FB50221A0FB300432BC5 /* app-icon-180.jpg in Resources */,
 				8B2E606622051AE500B89FDF /* LaunchScreen.storyboard in Resources */,
-				8B75AA892217B49800FF1169 /* SplashScreen.png in Resources */,
-				8BB04CA7221920B7001C9B04 /* Webp.net-resizeimage.png in Resources */,
+				8B14FB51221A0FB300432BC5 /* app-icon-120.jpg in Resources */,
+				8B75AA892217B49800FF1169 /* splash-screen.png in Resources */,
 				8B2E606322051AE500B89FDF /* Assets.xcassets in Resources */,
 				8B2E606122051AE400B89FDF /* Main.storyboard in Resources */,
+				8B14FB53221A10AF00432BC5 /* app-store-icon-1024.jpg in Resources */,
 				8B75AA8D2217CEF100FF1169 /* close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +252,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -256,6 +261,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
